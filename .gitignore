@@ -8,3 +8,5 @@ test-results/
 out/
 dist/
 coverage/
+
+.vercel
