@@ -1,0 +1,10 @@
+.next/
+node_modules/
+test-results/
+
+*.log
+.env*
+
+out/
+dist/
+coverage/
