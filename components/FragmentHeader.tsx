@@ -1,5 +1,4 @@
 import { Boxes } from "lucide-react";
-import { TopTabs } from "@/components/TopTabs";
 import { WalletButton } from "@/components/WalletButton";
 
 export function FragmentHeader() {
@@ -18,7 +17,6 @@ export function FragmentHeader() {
           </div>
           <WalletButton />
         </div>
-        <TopTabs />
       </div>
     </header>
   );
