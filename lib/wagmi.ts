@@ -9,8 +9,9 @@ type InjectedWalletProvider = EIP1193Provider & {
   providers?: InjectedWalletProvider[];
 };
 
-// TODO: Replace this value after Base.dev verification.
-export const BUILDER_CODE_SUFFIX = "0x" as `0x${string}`;
+export const BUILDER_CODE = "bc_a2a4ojtz";
+export const BUILDER_CODE_SUFFIX =
+  "0x62635f613261346f6a747a0b0080218021802180218021802180218021" as `0x${string}`;
 export const HAS_BUILDER_CODE_SUFFIX = BUILDER_CODE_SUFFIX !== "0x";
 
 export const wagmiConfig = createConfig({
