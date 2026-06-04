@@ -1,102 +1,117 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { useAccount, useWriteContract } from "wagmi";
+import { useEffect, useState } from "react";
+import { zeroAddress } from "viem";
+import { useAccount, useReadContract, useWaitForTransactionReceipt, useWriteContract } from "wagmi";
 import { base } from "wagmi/chains";
 import {
   FRAGMENT_COLLECTION_VAULT_CONTRACT_ADDRESS,
   fragmentCollectionVaultAbi
 } from "@/lib/contracts";
-import { fragments as initialFragments } from "@/lib/mockData";
-import {
-  getAvailableFragments,
-  getCollectionSummary,
-  getFeaturedFragment,
-  getMissingFragments,
-  getOwnedFragments
-} from "@/lib/fragmentLogic";
-import { BUILDER_CODE_SUFFIX } from "@/lib/wagmi";
-import { trackTransaction } from "@/utils/track";
 
-const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
-const hasConfiguredContract = FRAGMENT_COLLECTION_VAULT_CONTRACT_ADDRESS !== ZERO_ADDRESS;
+const DEFAULT_FRAGMENT_ID = 1;
 
 export function useFragmentCollectionVault() {
   const { address, isConnected } = useAccount();
   const { writeContractAsync } = useWriteContract();
-  const [fragments, setFragments] = useState(initialFragments);
-  const [claimingId, setClaimingId] = useState<string | null>(null);
+  const [fragmentId, setFragmentId] = useState(DEFAULT_FRAGMENT_ID);
+  const [txHash, setTxHash] = useState<`0x${string}` | undefined>();
   const [lastClaimHash, setLastClaimHash] = useState<string | null>(null);
   const [claimError, setClaimError] = useState<string | null>(null);
 
-  const summary = useMemo(() => getCollectionSummary(fragments), [fragments]);
-  const ownedFragments = useMemo(() => getOwnedFragments(fragments), [fragments]);
-  const missingFragments = useMemo(() => getMissingFragments(fragments), [fragments]);
-  const availableFragments = useMemo(() => getAvailableFragments(fragments), [fragments]);
-  const featuredFragment = useMemo(() => getFeaturedFragment(fragments), [fragments]);
+  const maxFragmentId = useReadContract({
+    address: FRAGMENT_COLLECTION_VAULT_CONTRACT_ADDRESS,
+    abi: fragmentCollectionVaultAbi,
+    functionName: "MAX_FRAGMENT_ID",
+    chainId: base.id
+  });
 
-  async function claimFragment(fragmentId: string) {
-    const fragment = fragments.find((item) => item.id === fragmentId);
+  const totalClaims = useReadContract({
+    address: FRAGMENT_COLLECTION_VAULT_CONTRACT_ADDRESS,
+    abi: fragmentCollectionVaultAbi,
+    functionName: "totalClaims",
+    chainId: base.id
+  });
 
-    if (!fragment || fragment.status === "locked" || fragment.status === "owned") {
+  const fragmentOwner = useReadContract({
+    address: FRAGMENT_COLLECTION_VAULT_CONTRACT_ADDRESS,
+    abi: fragmentCollectionVaultAbi,
+    functionName: "fragmentOwner",
+    args: [BigInt(fragmentId)],
+    chainId: base.id
+  });
+
+  const walletClaimCount = useReadContract({
+    address: FRAGMENT_COLLECTION_VAULT_CONTRACT_ADDRESS,
+    abi: fragmentCollectionVaultAbi,
+    functionName: "walletClaimCount",
+    args: [address ?? zeroAddress],
+    chainId: base.id
+  });
+
+  const receipt = useWaitForTransactionReceipt({
+    hash: txHash,
+    chainId: base.id
+  });
+
+  const isClaiming = receipt.isLoading;
+  const selectedOwner = fragmentOwner.data ?? zeroAddress;
+  const hasSelectedOwner = selectedOwner !== zeroAddress;
+  const hasWalletClaim = Boolean(walletClaimCount.data && walletClaimCount.data > BigInt(0));
+  const canClaim = isConnected && !hasSelectedOwner && !hasWalletClaim && !isClaiming;
+
+  useEffect(() => {
+    if (!receipt.isSuccess) {
       return;
     }
 
-    setClaimingId(fragmentId);
+    void totalClaims.refetch();
+    void fragmentOwner.refetch();
+    void walletClaimCount.refetch();
+  }, [receipt.isSuccess, totalClaims, fragmentOwner, walletClaimCount]);
+
+  async function claimFragment() {
+    if (!canClaim) {
+      return;
+    }
+
     setClaimError(null);
 
     try {
-      const txHash = hasConfiguredContract
-        ? await writeContractAsync({
-            address: FRAGMENT_COLLECTION_VAULT_CONTRACT_ADDRESS,
-            abi: fragmentCollectionVaultAbi,
-            functionName: "claimFragment",
-            args: [BigInt(Number(fragmentId))],
-            chainId: base.id,
-            dataSuffix: BUILDER_CODE_SUFFIX
-          })
-        : `0xpreview${fragmentId}${Date.now().toString(16)}`;
+      const nextHash = await writeContractAsync({
+        address: FRAGMENT_COLLECTION_VAULT_CONTRACT_ADDRESS,
+        abi: fragmentCollectionVaultAbi,
+        functionName: "claimFragment",
+        args: [BigInt(fragmentId)],
+        chainId: base.id
+      });
 
-      setFragments((current) =>
-        current.map((item) =>
-          item.id === fragmentId
-            ? {
-                ...item,
-                status: "owned",
-                ownedAt: new Date().toISOString()
-              }
-            : item
-        )
-      );
-      setLastClaimHash(txHash);
-
-      await trackTransaction(
-        "app-fragment-collection",
-        "base-split-vault-fragment-collection",
-        address,
-        txHash
-      );
+      setTxHash(nextHash);
+      setLastClaimHash(nextHash);
     } catch (error) {
       const message = error instanceof Error ? error.message : "Claim failed. Please try another wallet.";
       setClaimError(message);
-    } finally {
-      setClaimingId(null);
     }
   }
 
   return {
     address,
     isConnected,
-    fragments,
-    summary,
-    ownedFragments,
-    missingFragments,
-    availableFragments,
-    featuredFragment,
-    claimingId,
-    lastClaimHash,
+    canClaim,
     claimError,
-    hasConfiguredContract,
-    claimFragment
+    claimFragment,
+    contractAddress: FRAGMENT_COLLECTION_VAULT_CONTRACT_ADDRESS,
+    fragmentId,
+    hasSelectedOwner,
+    hasWalletClaim,
+    isClaiming,
+    lastClaimHash,
+    maxFragmentId: maxFragmentId.data,
+    readError:
+      maxFragmentId.error ?? totalClaims.error ?? fragmentOwner.error ?? walletClaimCount.error ?? receipt.error,
+    selectedOwner,
+    setFragmentId,
+    totalClaims: totalClaims.data,
+    walletClaimCount: walletClaimCount.data
   };
 }
