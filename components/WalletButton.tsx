@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronDown, Plug, Unplug, Wallet } from "lucide-react";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
+import { base } from "wagmi/chains";
 
 function shortAddress(address: string) {
   return `${address.slice(0, 6)}...${address.slice(-4)}`;
@@ -43,10 +44,10 @@ export function WalletButton() {
         .map((connector) => ({
           connector,
           label:
-            connector.name === "Injected"
-              ? "Browser Wallet"
-              : connector.name === "Coinbase Wallet"
-                ? "Coinbase Wallet"
+            connector.id === "metaMask"
+              ? "MetaMask"
+              : connector.id === "okxWallet"
+                ? "OKX Wallet"
                 : connector.name
         })),
     [connectors]
@@ -63,10 +64,10 @@ export function WalletButton() {
       return;
     }
 
-    const injectedConnector = connectors.find((connector) => connector.type === "injected");
+    const injectedConnector = connectors.find((connector) => connector.id === "coinbaseWalletSDK");
 
     if (injectedConnector) {
-      connect({ connector: injectedConnector });
+      connect({ connector: injectedConnector, chainId: base.id });
     }
   }, [connect, connectors, isConnected]);
 
@@ -105,7 +106,7 @@ export function WalletButton() {
               role="menuitem"
               onClick={() => {
                 window.localStorage.removeItem("fragment-wallet-manual-disconnect");
-                connect({ connector });
+                connect({ connector, chainId: base.id });
                 setIsOpen(false);
               }}
               disabled={isPending}
