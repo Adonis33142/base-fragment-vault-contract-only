@@ -1,5 +1,5 @@
 export const FRAGMENT_COLLECTION_VAULT_CONTRACT_ADDRESS: `0x${string}` =
-  "0x43D389722DD6fa7e871477ee327F3Cc6dB406913";
+  "0x7354006876d8bB1fd764Fe4B1A501F5DB39B7F3c";
 
 export const fragmentCollectionVaultAbi = [
   {
