@@ -8,6 +8,7 @@ import {
   FRAGMENT_COLLECTION_VAULT_CONTRACT_ADDRESS,
   fragmentCollectionVaultAbi
 } from "@/lib/contracts";
+import { BUILDER_CODE_SUFFIX, HAS_BUILDER_CODE_SUFFIX } from "@/lib/wagmi";
 
 const DEFAULT_FRAGMENT_ID = 1;
 
@@ -83,7 +84,8 @@ export function useFragmentCollectionVault() {
         abi: fragmentCollectionVaultAbi,
         functionName: "claimFragment",
         args: [BigInt(fragmentId)],
-        chainId: base.id
+        chainId: base.id,
+        dataSuffix: HAS_BUILDER_CODE_SUFFIX ? BUILDER_CODE_SUFFIX : undefined
       });
 
       setTxHash(nextHash);
