@@ -57,3 +57,11 @@ If the repository includes a `package.json`, run:
 ```bash
 npm install
 ```
+
+If the repository uses another toolchain, follow the configuration files included in the project.
+
+Common files to check include:
+
+- `package.json`
+- `foundry.toml`
+- `hardhat.config.js`
