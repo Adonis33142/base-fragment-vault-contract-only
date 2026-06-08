@@ -105,3 +105,9 @@ Review any environment-specific settings before running commands that interact w
 The exact project structure may vary depending on the contract tooling used.
 
 A typical contract-only repository may include directories such as:
+
+- `contracts/`
+- `src/`
+- `test/`
+- `scripts/`
+- `deployments/`
