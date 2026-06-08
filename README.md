@@ -92,3 +92,9 @@ It should contain files that directly support contract implementation, configura
 It should not be treated as the place for unrelated product code, web interfaces, backend APIs, or external application logic.
 
 Keeping the scope narrow makes the repository easier to review, maintain, and audit.
+
+## Development Notes
+
+Before making changes, review the existing project structure and follow the patterns already used in the repository.
+
+Keep contract changes small and easy to review.
