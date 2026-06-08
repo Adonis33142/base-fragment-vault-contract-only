@@ -51,3 +51,9 @@ ls
 ## Setup
 
 Install dependencies using the package manager or tooling configured in the repository.
+
+If the repository includes a `package.json`, run:
+
+```bash
+npm install
+```
