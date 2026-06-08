@@ -65,3 +65,9 @@ Common files to check include:
 - `package.json`
 - `foundry.toml`
 - `hardhat.config.js`
+- `hardhat.config.ts`
+- `README.md`
+
+## Usage
+
+After setup, use the scripts and commands defined by the repository configuration.
