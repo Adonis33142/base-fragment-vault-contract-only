@@ -77,3 +77,11 @@ For example, if npm scripts are available, list them with:
 ```bash
 npm run
 ```
+
+Then run the appropriate command for development, testing, building, or deployment.
+
+If contract tests are included, run the test command defined by the project.
+
+If deployment scripts are included, review them carefully before executing.
+
+## Development Notes
