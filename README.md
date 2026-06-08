@@ -52,3 +52,9 @@ Review the repository contents:
 ```bash
 ls
 ```
+
+## Setup
+
+Because this is a contract-only repository, setup depends on the tooling files included in the project.
+
+After cloning the repository, inspect the root directory for configuration files such as package manifests, compiler settings, scripts, or framework-specific configuration.
