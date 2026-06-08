@@ -98,3 +98,9 @@ Keeping the scope narrow makes the repository easier to review, maintain, and au
 Before making changes, review the existing project structure and follow the patterns already used in the repository.
 
 Keep contract changes small and easy to review.
+
+Document meaningful design decisions when they affect contract behavior or maintenance.
+
+Avoid mixing formatting-only changes with functional contract changes when possible.
+
+Run the available project checks before opening a pull request.
