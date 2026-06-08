@@ -45,3 +45,9 @@ cd base-fragment-vault-contract-only
 Review the repository contents:
 
 ```bash
+ls
+```
+
+## Setup
+
+Install dependencies using the package manager or tooling configured in the repository.
