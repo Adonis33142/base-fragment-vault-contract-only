@@ -104,3 +104,11 @@ Document meaningful design decisions when they affect contract behavior or maint
 Avoid mixing formatting-only changes with functional contract changes when possible.
 
 Run the available project checks before opening a pull request.
+
+## Repository Maintenance
+
+Keep documentation aligned with the current contract implementation.
+
+Remove unused files when they are no longer needed.
+
+Prefer clear naming for contract files, scripts, and configuration.
