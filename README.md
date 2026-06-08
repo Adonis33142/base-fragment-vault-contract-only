@@ -92,3 +92,8 @@ Before committing changes, consider checking:
 
 - Contract source files
 - Configuration files
+- Dependency changes
+- Test coverage, if tests are present
+- Deployment scripts, if scripts are present
+
+Avoid committing generated files unless they are intentionally part of the project.
