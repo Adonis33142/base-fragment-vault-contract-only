@@ -71,3 +71,9 @@ Common files to check include:
 ## Usage
 
 After setup, use the scripts and commands defined by the repository configuration.
+
+For example, if npm scripts are available, list them with:
+
+```bash
+npm run
+```
