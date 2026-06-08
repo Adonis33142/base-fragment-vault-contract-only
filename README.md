@@ -65,3 +65,10 @@ For example, if a `package.json` file is present, use the package manager config
 
 ```bash
 npm install
+```
+
+If the repository uses a different package manager or contract development framework, follow the configuration and scripts already included in the repository.
+
+## Usage
+
+Use this repository to review, modify, test, and maintain the BaseSplitVault contract files.
