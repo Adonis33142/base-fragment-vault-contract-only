@@ -37,3 +37,11 @@ git clone https://github.com/Adonis33142/base-fragment-vault-contract-only.git
 ```
 
 Move into the project directory:
+
+```bash
+cd base-fragment-vault-contract-only
+```
+
+Review the repository contents:
+
+```bash
