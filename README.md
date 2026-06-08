@@ -85,3 +85,10 @@ If contract tests are included, run the test command defined by the project.
 If deployment scripts are included, review them carefully before executing.
 
 ## Development Notes
+
+Keep contract changes focused and easy to review.
+
+Before committing changes, consider checking:
+
+- Contract source files
+- Configuration files
