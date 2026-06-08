@@ -97,3 +97,11 @@ Before committing changes, consider checking:
 - Deployment scripts, if scripts are present
 
 Avoid committing generated files unless they are intentionally part of the project.
+
+Review any environment-specific settings before running commands that interact with external services or networks.
+
+## Project Structure
+
+The exact project structure may vary depending on the contract tooling used.
+
+A typical contract-only repository may include directories such as:
