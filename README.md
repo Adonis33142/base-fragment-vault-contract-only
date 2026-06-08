@@ -11,3 +11,9 @@ BaseSplitVault provides a focused workspace for contract development and related
 This repository is intentionally limited to contract-related source code, configuration, documentation, and supporting files.
 
 It is not intended to be a complete application stack.
+
+Frontend application code, backend services, and unrelated infrastructure are outside the scope of this repository.
+
+Use this repository as the primary reference for the BaseSplitVault contract implementation.
+
+## Repository Details
