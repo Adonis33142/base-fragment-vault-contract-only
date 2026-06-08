@@ -124,3 +124,11 @@ When contributing to BaseSplitVault:
 4. Run the available checks or tests.
 5. Commit your changes with a clear message.
 6. Open a pull request for review.
+
+## Notes
+
+This README is intended to provide a clear starting point for working with the repository.
+
+For implementation details, review the contract source code and configuration files directly.
+
+Always verify commands against the current repository contents before running them.
