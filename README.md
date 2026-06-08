@@ -72,3 +72,9 @@ If the repository uses a different package manager or contract development frame
 ## Usage
 
 Use this repository to review, modify, test, and maintain the BaseSplitVault contract files.
+
+A typical workflow is:
+
+1. Clone the repository.
+2. Install any required dependencies.
+3. Review the contract source files.
