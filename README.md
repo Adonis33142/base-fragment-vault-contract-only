@@ -119,3 +119,8 @@ Use the actual files in this repository as the source of truth.
 When contributing to BaseSplitVault:
 
 1. Clone the repository.
+2. Create a new branch for your changes.
+3. Make focused updates.
+4. Run the available checks or tests.
+5. Commit your changes with a clear message.
+6. Open a pull request for review.
