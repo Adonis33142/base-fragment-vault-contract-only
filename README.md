@@ -32,3 +32,9 @@ Use this repository as the primary reference for the BaseSplitVault contract imp
 - Simple structure for easier maintenance
 - Support for repository-specific tooling and configuration files
 - Suitable for focused contract development workflows
+
+## Getting Started
+
+Clone the repository:
+
+```bash
