@@ -118,3 +118,9 @@ Ensure that any new tooling added to the repository is relevant to contract deve
 ## Contributing
 
 Contributions should remain within the contract-only scope of the project.
+
+When proposing changes, include enough context for reviewers to understand the purpose of the update.
+
+If a change affects contract behavior, describe the expected impact clearly.
+
+If tests or validation steps are available, include the results with the change.
