@@ -21,3 +21,10 @@ Use this repository as the primary reference for the BaseSplitVault contract imp
 - Repository type: contract-only project
 
 ## Features
+
+- Contract-focused repository structure
+- Clear separation from frontend and backend application code
+- Central location for contract source files and documentation
+- Practical scope for contract review and implementation tracking
+- Simple structure for easier maintenance
+- Support for repository-specific tooling and configuration files
