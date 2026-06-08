@@ -25,3 +25,9 @@ Use this repository as the primary reference for the BaseSplitVault contract imp
 - Contract-focused project structure
 - Clear separation from frontend or backend application code
 - Suitable for contract review and implementation tracking
+- Simple repository scope for easier maintenance
+- Central location for project source files and documentation
+
+## Getting Started
+
+Clone the repository:
