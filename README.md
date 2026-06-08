@@ -111,3 +111,11 @@ A typical contract-only repository may include directories such as:
 - `test/`
 - `scripts/`
 - `deployments/`
+
+Use the actual files in this repository as the source of truth.
+
+## Contributing
+
+When contributing to BaseSplitVault:
+
+1. Clone the repository.
