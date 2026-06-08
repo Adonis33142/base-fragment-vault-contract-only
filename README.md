@@ -58,3 +58,10 @@ ls
 Because this is a contract-only repository, setup depends on the tooling files included in the project.
 
 After cloning the repository, inspect the root directory for configuration files such as package manifests, compiler settings, scripts, or framework-specific configuration.
+
+If a package manifest is present, install dependencies using the package manager expected by the repository.
+
+For example, if a `package.json` file is present, use the package manager configured for the project.
+
+```bash
+npm install
