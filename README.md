@@ -112,3 +112,9 @@ Keep documentation aligned with the current contract implementation.
 Remove unused files when they are no longer needed.
 
 Prefer clear naming for contract files, scripts, and configuration.
+
+Ensure that any new tooling added to the repository is relevant to contract development.
+
+## Contributing
+
+Contributions should remain within the contract-only scope of the project.
