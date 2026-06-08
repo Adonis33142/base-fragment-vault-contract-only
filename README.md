@@ -124,3 +124,11 @@ When proposing changes, include enough context for reviewers to understand the p
 If a change affects contract behavior, describe the expected impact clearly.
 
 If tests or validation steps are available, include the results with the change.
+
+## Notes
+
+BaseSplitVault is maintained as a focused contract repository.
+
+The repository should remain simple, reviewable, and centered on the contract implementation.
+
+For the latest project files and history, use the repository URL listed above.
