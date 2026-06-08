@@ -28,3 +28,11 @@ Use this repository as the primary reference for the BaseSplitVault contract imp
 - Practical scope for contract review and implementation tracking
 - Simple structure for easier maintenance
 - Support for repository-specific tooling and configuration files
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Adonis33142/base-fragment-vault-contract-only.git
+```
