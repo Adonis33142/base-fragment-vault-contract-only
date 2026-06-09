@@ -22,3 +22,12 @@ Use this repository as the primary reference for the BaseSplitVault contract imp
 - Repository URL: `https://github.com/Adonis33142/base-fragment-vault-contract-only.git`
 - Repository type: Contract-only project
 - Primary purpose: Contract implementation, review, and maintenance
+
+## Features
+
+- Contract-focused repository structure
+- Clear separation from frontend and backend application code
+- Central location for contract source files and related documentation
+- Practical scope for contract review and implementation tracking
+- Simple structure for easier maintenance
+- Support for repository-specific tooling and configuration files
