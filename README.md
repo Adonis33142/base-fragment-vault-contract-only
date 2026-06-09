@@ -39,3 +39,11 @@ Use this repository as the primary reference for the BaseSplitVault contract imp
 Clone the repository:
 
 ```bash
+git clone https://github.com/Adonis33142/base-fragment-vault-contract-only.git
+```
+
+Enter the project directory:
+
+```bash
+cd base-fragment-vault-contract-only
+```
