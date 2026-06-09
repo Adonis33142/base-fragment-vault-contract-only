@@ -71,3 +71,12 @@ npm install
 If the repository uses a different package manager or contract development framework, follow the configuration and scripts already included in the repository.
 
 Avoid adding new tooling unless it directly supports contract development, testing, review, or deployment preparation.
+
+## Usage
+
+Use this repository to review, modify, test, and maintain the BaseSplitVault contract files.
+
+A typical workflow is:
+
+1. Clone the repository.
+2. Install any required dependencies.
