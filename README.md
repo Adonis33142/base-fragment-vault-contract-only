@@ -31,3 +31,11 @@ Use this repository as the primary reference for the BaseSplitVault contract imp
 - Practical scope for contract review and implementation tracking
 - Simple structure for easier maintenance
 - Support for repository-specific tooling and configuration files
+- Suitable for focused contract development workflows
+- Designed to keep implementation work easy to inspect and review
+
+## Getting Started
+
+Clone the repository:
+
+```bash
