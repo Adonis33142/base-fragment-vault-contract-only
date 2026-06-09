@@ -120,3 +120,11 @@ If scripts are present, verify that they still match the current project structu
 When reviewing changes, focus on correctness, clarity, maintainability, and consistency with the existing implementation.
 
 Pay close attention to contract behavior, configuration changes, and any files that affect deployment preparation.
+
+Confirm that the repository remains limited to contract-related materials.
+
+Ask for clarification when a change affects behavior but does not include enough context.
+
+Prefer simple, explicit changes over broad updates that are difficult to inspect.
+
+## Repository Maintenance
