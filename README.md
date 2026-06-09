@@ -128,3 +128,11 @@ Ask for clarification when a change affects behavior but does not include enough
 Prefer simple, explicit changes over broad updates that are difficult to inspect.
 
 ## Repository Maintenance
+
+Keep documentation aligned with the current contract implementation.
+
+Remove unused files when they are no longer needed.
+
+Prefer clear naming for contract files, scripts, configuration, and documentation.
+
+Ensure that any new tooling added to the repository is relevant to contract development.
