@@ -80,3 +80,11 @@ A typical workflow is:
 
 1. Clone the repository.
 2. Install any required dependencies.
+3. Review the contract source files and project configuration.
+4. Create a dedicated branch for contract changes.
+5. Make changes in small, reviewable commits.
+6. Run the available project checks or tests.
+7. Review the diff before committing or submitting changes.
+8. Submit changes through the normal review process.
+
+## Project Scope
