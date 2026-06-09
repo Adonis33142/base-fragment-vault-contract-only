@@ -146,3 +146,11 @@ Update this README when project setup, usage, or scope changes.
 Contributions should remain within the contract-only scope of the project.
 
 When proposing changes, include enough context for reviewers to understand the purpose of the update.
+
+If a change affects contract behavior, describe the expected impact clearly.
+
+If tests or validation steps are available, include the results with the change.
+
+Keep pull requests focused on a single purpose whenever possible.
+
+Do not include unrelated application code or infrastructure changes.
