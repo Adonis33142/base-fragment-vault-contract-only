@@ -154,3 +154,11 @@ If tests or validation steps are available, include the results with the change.
 Keep pull requests focused on a single purpose whenever possible.
 
 Do not include unrelated application code or infrastructure changes.
+
+## Notes
+
+BaseSplitVault is maintained as a focused contract repository.
+
+The repository should remain simple, reviewable, and centered on the contract implementation.
+
+For the latest project files and history, use the repository URL listed above.
