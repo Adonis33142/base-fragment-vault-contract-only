@@ -136,3 +136,13 @@ Remove unused files when they are no longer needed.
 Prefer clear naming for contract files, scripts, configuration, and documentation.
 
 Ensure that any new tooling added to the repository is relevant to contract development.
+
+Keep the repository structure straightforward so contributors can quickly understand where files belong.
+
+Update this README when project setup, usage, or scope changes.
+
+## Contributing
+
+Contributions should remain within the contract-only scope of the project.
+
+When proposing changes, include enough context for reviewers to understand the purpose of the update.
