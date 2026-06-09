@@ -104,3 +104,11 @@ When adding files, make sure they have a clear purpose within the contract devel
 Before making changes, review the existing project structure and follow the patterns already used in the repository.
 
 Keep contract changes small and easy to review.
+
+Document meaningful design decisions when they affect contract behavior or long-term maintenance.
+
+Avoid mixing formatting-only changes with functional contract changes when possible.
+
+Run the available project checks before opening a pull request.
+
+If tests are present, update or add tests for changes that affect contract behavior.
