@@ -88,3 +88,11 @@ A typical workflow is:
 8. Submit changes through the normal review process.
 
 ## Project Scope
+
+This repository is focused on contract work only.
+
+It should contain files that directly support contract implementation, configuration, testing, deployment preparation, or documentation.
+
+It should not be used for unrelated product code, web interfaces, backend APIs, or external application logic.
+
+Keeping the scope narrow makes the repository easier to review, maintain, and audit.
