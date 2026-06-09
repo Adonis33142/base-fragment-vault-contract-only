@@ -112,3 +112,11 @@ Avoid mixing formatting-only changes with functional contract changes when possi
 Run the available project checks before opening a pull request.
 
 If tests are present, update or add tests for changes that affect contract behavior.
+
+If scripts are present, verify that they still match the current project structure before relying on them.
+
+## Review Guidelines
+
+When reviewing changes, focus on correctness, clarity, maintainability, and consistency with the existing implementation.
+
+Pay close attention to contract behavior, configuration changes, and any files that affect deployment preparation.
