@@ -5,3 +5,11 @@ BaseSplitVault is a contract-only repository for the BaseSplitVault contract imp
 Repository: https://github.com/Adonis33142/base-fragment-vault-contract-only.git
 
 ## Overview
+
+BaseSplitVault provides a focused workspace for contract development, review, and maintenance.
+
+This repository is intentionally limited to contract-related source code, configuration, documentation, and supporting files.
+
+It is not intended to be a complete application stack.
+
+Frontend applications, backend services, and unrelated infrastructure are outside the scope of this repository.
