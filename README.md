@@ -63,3 +63,11 @@ After cloning the repository, inspect the root directory for configuration files
 If a package manifest is present, install dependencies using the package manager expected by the repository.
 
 For example, if a `package.json` file is present, run:
+
+```bash
+npm install
+```
+
+If the repository uses a different package manager or contract development framework, follow the configuration and scripts already included in the repository.
+
+Avoid adding new tooling unless it directly supports contract development, testing, review, or deployment preparation.
