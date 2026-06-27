@@ -13,6 +13,7 @@ This repository is intentionally limited to contract-related source code, config
 It is not intended to serve as a complete application stack.
 
 Frontend applications, backend services, external infrastructure, and unrelated product code are outside the scope of this repository.
+<<<<<<< HEAD
 
 Use this repository as the primary reference for the BaseSplitVault contract implementation.
 
@@ -88,3 +89,5 @@ A typical workflow is:
 8. Submit changes through the normal review process.
 
 ## Project Scope
+=======
+>>>>>>> 27ced74 (README)
