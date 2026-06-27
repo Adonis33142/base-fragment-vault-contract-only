@@ -27,6 +27,9 @@ Use this repository as the primary reference for the BaseSplitVault contract imp
 - Repository type: Contract-only project
 - Primary purpose: Contract implementation, review, and maintenance
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 03ca586 (README)
 
 ## Features
 
@@ -36,6 +39,7 @@ Use this repository as the primary reference for the BaseSplitVault contract imp
 - Practical scope for contract review and implementation tracking
 - Simple structure for easier maintenance
 - Support for repository-specific tooling and configuration files
+<<<<<<< HEAD
 - Suitable for focused contract development workflows
 - Designed to keep implementation work easy to inspect and review
 
@@ -97,3 +101,5 @@ A typical workflow is:
 >>>>>>> 27ced74 (README)
 =======
 >>>>>>> e10a5e3 (README)
+=======
+>>>>>>> 03ca586 (README)
