@@ -14,6 +14,9 @@ It is not intended to serve as a complete application stack.
 
 Frontend applications, backend services, external infrastructure, and unrelated product code are outside the scope of this repository.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e10a5e3 (README)
 
 Use this repository as the primary reference for the BaseSplitVault contract implementation.
 
@@ -23,6 +26,7 @@ Use this repository as the primary reference for the BaseSplitVault contract imp
 - Repository URL: `https://github.com/Adonis33142/base-fragment-vault-contract-only.git`
 - Repository type: Contract-only project
 - Primary purpose: Contract implementation, review, and maintenance
+<<<<<<< HEAD
 
 ## Features
 
@@ -91,3 +95,5 @@ A typical workflow is:
 ## Project Scope
 =======
 >>>>>>> 27ced74 (README)
+=======
+>>>>>>> e10a5e3 (README)
