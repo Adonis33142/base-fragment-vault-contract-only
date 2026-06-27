@@ -64,6 +64,9 @@ Enter the project directory:
 cd base-fragment-vault-contract-only
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f5ae7c3 (README)
 
 Review the repository contents:
 
@@ -72,6 +75,7 @@ ls
 ```
 
 ## Setup
+<<<<<<< HEAD
 
 Because this is a contract-only repository, setup depends on the tooling files included in the project.
 
@@ -115,3 +119,5 @@ A typical workflow is:
 >>>>>>> a039aa1 (README)
 =======
 >>>>>>> 22a6120 (README)
+=======
+>>>>>>> f5ae7c3 (README)
