@@ -76,6 +76,9 @@ ls
 
 ## Setup
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a8eff7 (README)
 
 Because this is a contract-only repository, setup depends on the tooling files included in the project.
 
@@ -92,6 +95,7 @@ npm install
 If the repository uses a different package manager or contract development framework, follow the configuration and scripts already included in the project.
 
 Avoid adding new tooling unless it directly supports contract development, testing, review, or deployment preparation.
+<<<<<<< HEAD
 
 ## Usage
 
@@ -121,3 +125,5 @@ A typical workflow is:
 >>>>>>> 22a6120 (README)
 =======
 >>>>>>> f5ae7c3 (README)
+=======
+>>>>>>> 3a8eff7 (README)
