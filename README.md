@@ -52,6 +52,9 @@ Clone the repository:
 
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 22a6120 (README)
 git clone https://github.com/Adonis33142/base-fragment-vault-contract-only.git
 ```
 
@@ -60,6 +63,7 @@ Enter the project directory:
 ```bash
 cd base-fragment-vault-contract-only
 ```
+<<<<<<< HEAD
 
 Review the repository contents:
 
@@ -109,3 +113,5 @@ A typical workflow is:
 >>>>>>> 03ca586 (README)
 =======
 >>>>>>> a039aa1 (README)
+=======
+>>>>>>> 22a6120 (README)
