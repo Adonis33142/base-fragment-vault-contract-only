@@ -40,6 +40,9 @@ Use this repository as the primary reference for the BaseSplitVault contract imp
 - Simple structure for easier maintenance
 - Support for repository-specific tooling and configuration files
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a039aa1 (README)
 - Suitable for focused contract development workflows
 - Designed to keep implementation work easy to inspect and review
 
@@ -48,6 +51,7 @@ Use this repository as the primary reference for the BaseSplitVault contract imp
 Clone the repository:
 
 ```bash
+<<<<<<< HEAD
 git clone https://github.com/Adonis33142/base-fragment-vault-contract-only.git
 ```
 
@@ -103,3 +107,5 @@ A typical workflow is:
 >>>>>>> e10a5e3 (README)
 =======
 >>>>>>> 03ca586 (README)
+=======
+>>>>>>> a039aa1 (README)
